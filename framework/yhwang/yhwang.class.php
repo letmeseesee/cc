@@ -20,7 +20,8 @@ class yhwang
     public static function run(){
         spl_autoload_register('framework\yhwang\yhwang::autoload');//注册自动加载
         //路由分发
-
+        $mvc = new \framework\yhwang\control\dispitch();
+        $mvc->setMVC();
     }
 
     /*
@@ -29,10 +30,12 @@ class yhwang
      * (目前先这样吧)
      * **/
     public static function autoload($class){
+        //echo $class."</br>";
         //去除两边的'/'后在拼接,因为在不设置namespace时必须要写相对于根空间,但是其他设置的时候特意没写,干脆就这样办了
         $class_path = ltrim($class,'\\');
         $file = str_replace("\\","/",$class_path);
         $file = ROOT_PATH.$file;
+        //echo $file."</br>";
         require_once($file.".php");
     }
 }
