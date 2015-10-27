@@ -9,11 +9,9 @@ namespace framework\yhwang\model\baseModel;
 interface basesql {
     public function select($select);
     public function table($table);
-    public function update($table);
-    public function query($sql);
     public function join($joinTable);
     public function where($where);
+    public function query($sql);
     public function getOne();
     public function getAll();
-    public function IfSuccess();
 }

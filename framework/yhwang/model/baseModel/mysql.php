@@ -23,8 +23,8 @@ class db{//连接数据库的类
     );
     //获取数据库连接实例
     public function __construct(){
-        $this->db = new mysqli($this->dbConfig['host'],$this->dbConfig['username'],$this->dbConfig['password'],
-            $this->dbConfig['dbName']);//创建数据库实例
+            $this->db = new mysqli($this->dbConfig['host'],$this->dbConfig['username'],$this->dbConfig['password'],
+                $this->dbConfig['dbName']);//创建数据库实例
     }
     //判断是否连接成功
     public function ifConnectSuccess(){
