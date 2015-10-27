@@ -6,6 +6,7 @@
  * Date: 15/10/11
  * Time: 下午2:20
  */
+namespace framework\yhwang\model\baseModel;
 class db{//连接数据库的类
     public $db;//数据库实例
     public $dbConfig = array(

@@ -13,7 +13,7 @@ class test extends \framework\yhwang\control\baseControl
         parent::init($param);
     }
     public function index(){
-        $test = "lalalalala";
+        $test = "test";
         $this->view->assign('index',$test);
         $this->view->display('test');
     }

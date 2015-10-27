@@ -34,6 +34,7 @@ class yhwang
         //去除两边的'/'后在拼接,因为在不设置namespace时必须要写相对于根空间,但是其他设置的时候特意没写,干脆就这样办了
         $class_path = ltrim($class,'\\');
         $file = str_replace("\\","/",$class_path);
+        //echo ROOT_PATH;
         $file = ROOT_PATH.$file;
         //echo $file."</br>";
         require_once($file.".php");

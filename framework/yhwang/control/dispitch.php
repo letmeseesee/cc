@@ -21,8 +21,8 @@ class dispitch
         $request = $_SERVER['REQUEST_URI'];
         $request_array = explode('/',$request);
         //根据当前去除cc
-        array_shift($request_array);
-        array_shift($request_array);
+//        array_shift($request_array);
+//        array_shift($request_array);
         //取得当前的action和control
         $this->action = array_pop($request_array);
         $this->controller = array_pop($request_array);
